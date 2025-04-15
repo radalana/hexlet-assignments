@@ -13,12 +13,11 @@ public class Application {
             if (method.isAnnotationPresent(Inspect.class)) {
                 try {
                     method.invoke(address);
-                }catch(Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
-                System.out.println("Method " + method.getName() + " returns a value of type " + method.getReturnType());
+                System.out.println("Method " + method.getName() + " returns a value of type " + method.getReturnType().getSimpleName());
             }
         }
-        // END
     }
 }
